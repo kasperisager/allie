@@ -4,7 +4,7 @@ import test from '../../helper/test';
 import isOpaque from '../../../lib/utility/css/is-opaque';
 
 describe('isOpaque', () => {
-  it('should return true if an element is fully opaque', async () => {
+  it('returns true if an element is fully opaque', async () => {
     await test(
       `
       <p>Lorem ipsum</p>
@@ -13,7 +13,7 @@ describe('isOpaque', () => {
     );
   });
 
-  it('should return false if an element is not fully opaque', async () => {
+  it('returns false if an element is not fully opaque', async () => {
     await test(
       `
       <p style="opacity: 0.8">Lorem ipsum</p>
@@ -22,7 +22,7 @@ describe('isOpaque', () => {
     );
   });
 
-  it('should return false if a parent of an element is not fully opaque', async () => {
+  it('returns false if a parent of an element is not fully opaque', async () => {
     await test(
       `
       <div style="opacity: 0.8">

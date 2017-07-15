@@ -4,7 +4,7 @@ import test from '../../helper/test';
 import isDisplayed from '../../../lib/utility/css/is-displayed';
 
 describe('isDisplayed', () => {
-  it('should return true when an element is not display: none', async () => {
+  it('returns true when an element is not display: none', async () => {
     await test(
       `
       <p>Lorem ipsum</p>
@@ -13,7 +13,7 @@ describe('isDisplayed', () => {
     );
   });
 
-  it('should return false when an element is display: none', async () => {
+  it('returns false when an element is display: none', async () => {
     await test(
       `
       <p style="display: none">Lorem ipsum</p>
@@ -22,7 +22,7 @@ describe('isDisplayed', () => {
     );
   });
 
-  it('should return false when the parent of an element is display: none', async () => {
+  it('returns false when the parent of an element is display: none', async () => {
     await test(
       `
       <div style="display: none">

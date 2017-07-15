@@ -4,7 +4,7 @@ import test from '../../helper/test';
 import isTransparent from '../../../lib/utility/css/is-transparent';
 
 describe('isTransparent', () => {
-  it('should return true if an element is fully transparent', async () => {
+  it('returns true if an element is fully transparent', async () => {
     await test(
       `
       <p style="opacity: 0">Lorem ipsum</p>
@@ -13,7 +13,7 @@ describe('isTransparent', () => {
     );
   });
 
-  it('should return false if an element is not fully transparent', async () => {
+  it('returns false if an element is not fully transparent', async () => {
     await test(
       `
       <p>Lorem ipsum</p>
@@ -29,7 +29,7 @@ describe('isTransparent', () => {
     );
   });
 
-  it('should return true if a parent of an element is fully transparent', async () => {
+  it('returns true if a parent of an element is fully transparent', async () => {
     await test(
       `
       <div style="opacity: 0">
@@ -51,7 +51,7 @@ describe('isTransparent', () => {
     );
   });
 
-  it('should return false if a parent of an element is not fully transparent', async () => {
+  it('returns false if a parent of an element is not fully transparent', async () => {
     await test(
       `
       <div style="opacity: 0.8">
@@ -73,7 +73,7 @@ describe('isTransparent', () => {
     );
   });
 
-  it('should return true if the composite opacity of an element is fully transparent', async () => {
+  it('returns true if the composite opacity of an element is fully transparent', async () => {
     await test(
       `
       <div style="opacity: 0.1">

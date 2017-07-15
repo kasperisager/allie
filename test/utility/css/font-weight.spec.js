@@ -3,7 +3,7 @@ import test from '../../helper/test';
 import fontWeight from '../../../lib/utility/css/font-weight';
 
 describe('fontWeight', () => {
-  it('should return the font weight of an element as an integer', async () => {
+  it('returns the font weight of an element as an integer', async () => {
     await test(
       `
       <p style="font-weight: normal">Lorem ipsum</p>

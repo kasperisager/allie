@@ -4,7 +4,7 @@ import test from '../../helper/test';
 import hasLabel from '../../../lib/utility/html/has-label';
 
 describe('hasLabel', () => {
-  it('should return true if an element has an explicitly associated label', async () => {
+  it('returns true if an element has an explicitly associated label', async () => {
     await test(
       `
       <label for="input">Lorem ipsum</label>
@@ -14,7 +14,7 @@ describe('hasLabel', () => {
     );
   });
 
-  it('should return true if an element has an implicitly associated label', async () => {
+  it('returns true if an element has an implicitly associated label', async () => {
     await test(
       `
       <label>
@@ -37,7 +37,7 @@ describe('hasLabel', () => {
     );
   });
 
-  it('should return false if an element has no associated label', async () => {
+  it('returns false if an element has no associated label', async () => {
     await test(
       `
       <input id="input" type="text">

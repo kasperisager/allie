@@ -24,6 +24,17 @@ describe('hasLabel', () => {
       `,
       body => assert(hasLabel(find(body, 'input')) === true)
     );
+
+    await test(
+      `
+      <label>
+        Lorem ipsum
+        <input type="text">
+        <button>Lorem ipsum</button>
+      </label>
+      `,
+      body => assert(hasLabel(find(body, 'input')) === true)
+    );
   });
 
   it('should return false if an element has no associated label', async () => {
@@ -41,6 +52,7 @@ describe('hasLabel', () => {
       `,
       body => assert(hasLabel(find(body, 'input')) === false)
     );
+
     await test(
       `
       <label>

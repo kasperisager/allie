@@ -29,6 +29,15 @@ describe('role', () => {
     );
   });
 
+  it('returns the first role if multiple are associated with an element', async () => {
+    await test(
+      `
+      <div role="list button">Lorem ipsum</div>
+      `,
+      div => assert(role(div) === 'list')
+    );
+  });
+
   it('returns null if no role is associated with an element', async () => {
     await test(
       `

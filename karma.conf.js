@@ -1,3 +1,5 @@
+const headers = require('./test/helper/headers');
+
 module.exports = config => {
   config.set({
     frameworks: [
@@ -36,6 +38,7 @@ module.exports = config => {
           ]
         }]
       ]
-    }
+    },
+    customHeaders: headers
   });
 };

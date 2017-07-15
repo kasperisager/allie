@@ -7,7 +7,7 @@
   "author": "Kasper Isager <kasperisager@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "karma start --log-level warn"
+    "test": "karma start --log-level error"
   },
   "babel": {
     "presets": [

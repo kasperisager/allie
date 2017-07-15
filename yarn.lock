@@ -2997,10 +2997,6 @@ karma-mocha@^1.3.0:
   dependencies:
     minimist "1.2.0"
 
-karma-safari-launcher@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/karma-safari-launcher/-/karma-safari-launcher-1.0.0.tgz#96982a2cc47d066aae71c553babb28319115a2ce"
-
 karma@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/karma/-/karma-1.7.0.tgz#6f7a1a406446fa2e187ec95398698f4cee476269"

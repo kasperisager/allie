@@ -10,6 +10,13 @@ describe('fontSize', () => {
       `,
       p => assert(fontSize(p, PX) === 12)
     );
+
+    await test(
+      `
+      <p style="font-size: 1.5em">Lorem ipsum</p>
+      `,
+      p => assert(fontSize(p, PX) === 24)
+    );
   });
 
   it('returns the font size of an element in points', async () => {

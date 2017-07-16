@@ -29,12 +29,12 @@ describe('role', () => {
     );
   });
 
-  it('returns the first role if multiple are associated with an element', async () => {
+  it('returns the first valid role if multiple are associated with an element', async () => {
     await test(
       `
-      <div role="list button">Lorem ipsum</div>
+      <div role="foo button list">Lorem ipsum</div>
       `,
-      div => assert(role(div) === 'list')
+      div => assert(role(div) === 'button')
     );
   });
 
@@ -60,6 +60,22 @@ describe('role', () => {
       <a>Lorem ipsum</a>
       `,
       a => assert(role(a) === null)
+    );
+  });
+
+  it('returns null if a non-existing role is associated with an element', async () => {
+    await test(
+      `
+      <header role="foo">Lorem ipsum</header>
+      `,
+      header => assert(role(header) === null)
+    );
+
+    await test(
+      `
+      <a href="#">Lorem ipsum</a>
+      `,
+      a => assert(role(a) === 'link')
     );
   });
 });

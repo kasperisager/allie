@@ -45,6 +45,7 @@ describe('role', () => {
       `,
       div => assert(role(div) === null)
     );
+
     await test(
       `
       <article>

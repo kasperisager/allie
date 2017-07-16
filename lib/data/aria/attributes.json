@@ -1,0 +1,184 @@
+{
+  "aria-activedescendant": {
+    "type": "id"
+  },
+  "aria-atomic": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-autocomplete": {
+    "default": "none",
+    "valid": [
+      "inline",
+      "list",
+      "both",
+      "none"
+    ]
+  },
+  "aria-busy": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-checked": {
+    "default": "undefined",
+    "valid": [
+      "true",
+      "false",
+      "mixed",
+      "undefined"
+    ]
+  },
+  "aria-controls": {
+    "type": "idlist"
+  },
+  "aria-describedby": {
+    "type": "idlist"
+  },
+  "aria-disabled": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-dropeffect": {
+    "default": "none",
+    "valid": [
+      "copy",
+      "move",
+      "link",
+      "execute",
+      "popup",
+      "none"
+    ]
+  },
+  "aria-expanded": {
+    "default": "undefined",
+    "valid": [
+      "true",
+      "false",
+      "undefined"
+    ]
+  },
+  "aria-flowto": {
+    "type": "idlist"
+  },
+  "aria-grabbed": {
+    "default": "undefined",
+    "valid": [
+      "true",
+      "false",
+      "undefined"
+    ]
+  },
+  "aria-haspopup": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-hidden": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-invalid": {
+    "default": "false",
+    "valid": [
+      "grammar",
+      "false",
+      "spelling",
+      "true"
+    ]
+  },
+  "aria-label": {
+    "type": "string"
+  },
+  "aria-labelledby": {
+    "type": "idlist"
+  },
+  "aria-level": {
+    "type": "integer"
+  },
+  "aria-live": {
+    "default": "off",
+    "valid": [
+      "off",
+      "polite",
+      "assertive"
+    ]
+  },
+  "aria-multiline": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-multiselectable": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-orientation": {
+    "default": "vertical",
+    "valid": [
+      "horizontal",
+      "vertical"
+    ]
+  },
+  "aria-owns": {
+    "type": "idlist"
+  },
+  "aria-posinset": {
+    "type": "integer"
+  },
+  "aria-pressed": {
+    "default": "undefined",
+    "valid": [
+      "true",
+      "false",
+      "mixed",
+      "undefined"
+    ]
+  },
+  "aria-readonly": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-relevant": {
+    "default": "additions text",
+    "valid": [
+      "additions",
+      "removals",
+      "text",
+      "all"
+    ]
+  },
+  "aria-required": {
+    "default": "false",
+    "type": "boolean"
+  },
+  "aria-selected": {
+    "default": "undefined",
+    "valid": [
+      "true",
+      "false",
+      "undefined"
+    ]
+  },
+  "aria-setsize": {
+    "type": "integer"
+  },
+  "aria-sort": {
+    "default": "none",
+    "valid": [
+      "ascending",
+      "descending",
+      "none",
+      "other"
+    ]
+  },
+  "aria-valuemax": {
+    "type": "decimal"
+  },
+  "aria-valuemin": {
+    "type": "decimal"
+  },
+  "aria-valuenow": {
+    "type": "decimal"
+  },
+  "aria-valuetext": {
+    "type": "string"
+  }
+}

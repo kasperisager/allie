@@ -1,0 +1,685 @@
+{
+  "alert": {
+    "inherits": [
+      "region"
+    ],
+    "defaults": {
+      "aria-live": "assertive",
+      "aria-atomic": "true"
+    }
+  },
+  "alertdialog": {
+    "inherits": [
+      "alert",
+      "dialog"
+    ]
+  },
+  "application": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "article": {
+    "inherits": [
+      "document",
+      "region"
+    ]
+  },
+  "banner": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "button": {
+    "inherits": [
+      "command"
+    ],
+    "supported": [
+      "aria-expanded",
+      "aria-pressed"
+    ],
+    "name": "contents"
+  },
+  "checkbox": {
+    "inherits": [
+      "input"
+    ],
+    "required": [
+      "aria-checked"
+    ],
+    "defaults": {
+      "aria-checked": "false"
+    },
+    "name": "contents"
+  },
+  "columnheader": {
+    "inherits": [
+      "gridcell",
+      "sectionhead",
+      "widget"
+    ],
+    "context": [
+      "row"
+    ],
+    "supported": [
+      "aria-sort"
+    ],
+    "name": "contents"
+  },
+  "combobox": {
+    "inherits": [
+      "select"
+    ],
+    "owned": [
+      "listbox",
+      "textbox"
+    ],
+    "required": [
+      "aria-expanded"
+    ],
+    "supported": [
+      "aria-autocomplete",
+      "aria-required"
+    ],
+    "defaults": {
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
+    }
+  },
+  "command": {
+    "abstract": true,
+    "inherits": [
+      "widget"
+    ]
+  },
+  "complementary": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "composite": {
+    "abstract": true,
+    "inherits": [
+      "widget"
+    ],
+    "supported": [
+      "aria-activedescendant"
+    ]
+  },
+  "contentinfo": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "definition": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "dialog": {
+    "inherits": [
+      "window"
+    ]
+  },
+  "directory": {
+    "inherits": [
+      "list"
+    ],
+    "name": "contents"
+  },
+  "document": {
+    "inherits": [
+      "structure"
+    ],
+    "supported": [
+      "aria-expanded"
+    ]
+  },
+  "form": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "grid": {
+    "inherits": [
+      "composite",
+      "region"
+    ],
+    "owned": [
+      "row",
+      "rowgroup > row"
+    ],
+    "supported": [
+      "aria-level",
+      "aria-multiselectable",
+      "aria-readonly"
+    ]
+  },
+  "gridcell": {
+    "inherits": [
+      "section",
+      "widget"
+    ],
+    "context": [
+      "row"
+    ],
+    "supported": [
+      "aria-readonly",
+      "aria-required",
+      "aria-selected"
+    ],
+    "name": "contents"
+  },
+  "group": {
+    "inherits": [
+      "section"
+    ],
+    "supported": [
+      "aria-activedescendant"
+    ]
+  },
+  "heading": {
+    "inherits": [
+      "sectionhead"
+    ],
+    "supported": [
+      "aria-level"
+    ],
+    "name": "contents"
+  },
+  "img": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "input": {
+    "abstract": true,
+    "inherits": [
+      "widget"
+    ]
+  },
+  "landmark": {
+    "abstract": true,
+    "inherits": [
+      "region"
+    ]
+  },
+  "link": {
+    "inherits": [
+      "command"
+    ],
+    "supported": [
+      "aria-expanded"
+    ],
+    "name": "contents"
+  },
+  "list": {
+    "inherits": [
+      "region"
+    ],
+    "owned": [
+      "group > listitem",
+      "listitem"
+    ]
+  },
+  "listbox": {
+    "inherits": [
+      "list",
+      "select"
+    ],
+    "owned": [
+      "option"
+    ],
+    "supported": [
+      "aria-multiselectable",
+      "aria-required"
+    ]
+  },
+  "listitem": {
+    "inherits": [
+      "section"
+    ],
+    "context": [
+      "group",
+      "list"
+    ],
+    "supported": [
+      "aria-level",
+      "aria-posinset",
+      "aria-setsize"
+    ],
+    "name": "contents"
+  },
+  "log": {
+    "inherits": [
+      "region"
+    ],
+    "defaults": {
+      "aria-live": "polite"
+    }
+  },
+  "main": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "marquee": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "math": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "menu": {
+    "inherits": [
+      "list",
+      "select"
+    ],
+    "owned": [
+      "group > menuitemradio",
+      "menuitem",
+      "menuitemcheckbox",
+      "menuitemradio"
+    ]
+  },
+  "menubar": {
+    "inherits": [
+      "menu"
+    ]
+  },
+  "menuitem": {
+    "inherits": [
+      "command"
+    ],
+    "context": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "name": "contents"
+  },
+  "menuitemcheckbox": {
+    "inherits": [
+      "checkbox",
+      "menuitem"
+    ],
+    "context": [
+      "menu",
+      "menubar"
+    ],
+    "defaults": {
+      "aria-checked": "false"
+    },
+    "name": "contents"
+  },
+  "menuitemradio": {
+    "inherits": [
+      "menuitemcheckbox",
+      "radio"
+    ],
+    "context": [
+      "group",
+      "menu",
+      "menubar"
+    ],
+    "defaults": {
+      "aria-checked": "false"
+    },
+    "name": "contents"
+  },
+  "navigation": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "note": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "option": {
+    "inherits": [
+      "input"
+    ],
+    "context": [
+      "listbox"
+    ],
+    "supported": [
+      "aria-checked",
+      "aria-posinset",
+      "aria-selected",
+      "aria-setsize"
+    ],
+    "name": "contents"
+  },
+  "presentation": {
+    "inherits": [
+      "structure"
+    ]
+  },
+  "progressbar": {
+    "inherits": [
+      "range"
+    ],
+    "defaults": {
+      "aria-readonly": "true"
+    }
+  },
+  "radio": {
+    "inherits": [
+      "checkbox",
+      "option"
+    ],
+    "defaults": {
+      "aria-checked": "false"
+    },
+    "name": "contents"
+  },
+  "radiogroup": {
+    "inherits": [
+      "select"
+    ],
+    "owned": [
+      "radio"
+    ],
+    "supported": [
+      "aria-required"
+    ]
+  },
+  "range": {
+    "abstract": true,
+    "inherits": [
+      "widget"
+    ],
+    "supported": [
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow",
+      "aria-valuetext"
+    ]
+  },
+  "region": {
+    "inherits": [
+      "section"
+    ]
+  },
+  "roletype": {
+    "abstract": true,
+    "supported": [
+      "aria-atomic",
+      "aria-busy",
+      "aria-controls",
+      "aria-describedby",
+      "aria-disabled",
+      "aria-dropeffect",
+      "aria-flowto",
+      "aria-grabbed",
+      "aria-haspopup",
+      "aria-hidden",
+      "aria-invalid",
+      "aria-label",
+      "aria-labelledby",
+      "aria-live",
+      "aria-owns",
+      "aria-relevant"
+    ]
+  },
+  "row": {
+    "inherits": [
+      "group",
+      "widget"
+    ],
+    "context": [
+      "grid",
+      "rowgroup",
+      "treegrid"
+    ],
+    "owned": [
+      "columnheader",
+      "gridcell",
+      "rowheader"
+    ],
+    "supported": [
+      "aria-level",
+      "aria-selected"
+    ],
+    "name": "contents"
+  },
+  "rowgroup": {
+    "inherits": [
+      "group"
+    ],
+    "context": [
+      "grid"
+    ],
+    "owned": [
+      "row"
+    ],
+    "name": "contents"
+  },
+  "rowheader": {
+    "inherits": [
+      "gridcell",
+      "sectionhead",
+      "widget"
+    ],
+    "context": [
+      "row"
+    ],
+    "supported": [
+      "aria-sort"
+    ],
+    "name": "contents"
+  },
+  "search": {
+    "inherits": [
+      "landmark"
+    ]
+  },
+  "section": {
+    "abstract": true,
+    "inherits": [
+      "structure"
+    ],
+    "supported": [
+      "aria-expanded"
+    ],
+    "name": "contents"
+  },
+  "sectionhead": {
+    "abstract": true,
+    "inherits": [
+      "structure"
+    ],
+    "supported": [
+      "aria-expanded"
+    ],
+    "name": "contents"
+  },
+  "select": {
+    "abstract": true,
+    "inherits": [
+      "composite",
+      "group",
+      "input"
+    ]
+  },
+  "separator": {
+    "inherits": [
+      "structure"
+    ],
+    "supported": [
+      "aria-expanded",
+      "aria-orientation"
+    ]
+  },
+  "scrollbar": {
+    "inherits": [
+      "input",
+      "range"
+    ],
+    "required": [
+      "aria-controls",
+      "aria-orientation",
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow"
+    ],
+    "defaults": {
+      "aria-orientation": "vertical"
+    }
+  },
+  "slider": {
+    "inherits": [
+      "input",
+      "range"
+    ],
+    "required": [
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow"
+    ],
+    "supported": [
+      "aria-orientation"
+    ]
+  },
+  "spinbutton": {
+    "inherits": [
+      "input",
+      "range"
+    ],
+    "required": [
+      "aria-valuemax",
+      "aria-valuemin",
+      "aria-valuenow"
+    ],
+    "supported": [
+      "aria-required"
+    ]
+  },
+  "status": {
+    "inherits": [
+      "region"
+    ],
+    "defaults": {
+      "aria-live": "polite",
+      "aria-atomic": "true"
+    }
+  },
+  "structure": {
+    "abstract": true,
+    "inherits": [
+      "roletype"
+    ]
+  },
+  "tab": {
+    "inherits": [
+      "sectionhead",
+      "widget"
+    ],
+    "context": [
+      "tablist"
+    ],
+    "supported": [
+      "aria-selected"
+    ],
+    "name": "contents"
+  },
+  "tablist": {
+    "inherits": [
+      "composite",
+      "directory"
+    ],
+    "owned": [
+      "tab"
+    ],
+    "supported": [
+      "aria-level",
+      "aria-multiselectable"
+    ]
+  },
+  "tabpanel": {
+    "inherits": [
+      "region"
+    ]
+  },
+  "textbox": {
+    "inherits": [
+      "input"
+    ],
+    "supported": [
+      "aria-activedescendant",
+      "aria-autocomplete",
+      "aria-multiline",
+      "aria-readonly",
+      "aria-required"
+    ]
+  },
+  "timer": {
+    "inherits": [
+      "status"
+    ]
+  },
+  "toolbar": {
+    "inherits": [
+      "group"
+    ]
+  },
+  "tooltip": {
+    "inherits": [
+      "section"
+    ],
+    "name": "contents"
+  },
+  "tree": {
+    "inherits": [
+      "select"
+    ],
+    "owned": [
+      "group > treeitem",
+      "treeitem"
+    ],
+    "supported": [
+      "aria-multiselectable",
+      "aria-required"
+    ]
+  },
+  "treegrid": {
+    "inherits": [
+      "grid",
+      "tree"
+    ],
+    "owned": [
+      "row"
+    ]
+  },
+  "treeitem": {
+    "inherits": [
+      "listitem",
+      "option"
+    ],
+    "context": [
+      "group",
+      "tree"
+    ],
+    "name": "contents"
+  },
+  "widget": {
+    "abstract": true,
+    "inherits": [
+      "roletype"
+    ]
+  },
+  "window": {
+    "abstract": true,
+    "inherits": [
+      "roletype"
+    ],
+    "supported": [
+      "aria-expanded"
+    ]
+  }
+}

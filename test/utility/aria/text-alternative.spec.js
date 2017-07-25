@@ -62,4 +62,38 @@ describe('textAlternative', () => {
       body => assert(textAlternative(find(body, 'button')) === 'Lorem-ipsum')
     );
   });
+
+  it('returns the text alternative of a form control with a label', async () => {
+    await test(
+      `
+      <form>
+        <label for="input">Lorem ipsum<label>
+        <input type="text" id="input">
+      </form>
+      `,
+      form => assert(textAlternative(find(form, 'input')) === 'Lorem ipsum')
+    );
+
+    await test(
+      `
+      <form>
+        <label>
+          Lorem ipsum
+          <input type="text">
+        <label>
+      </form>
+      `,
+      form => assert(textAlternative(find(form, 'input')) === 'Lorem ipsum')
+    );
+  });
+
+  it('includes form control values when labels reference form controls', async () => {
+    await test(
+      `
+      <div id="label">Lorem ipsum</div>
+      <input type="text" id="input" value="dolor" aria-labelledby="label input">
+      `,
+      body => assert(textAlternative(find(body, 'input')) === 'Lorem ipsum dolor')
+    );
+  });
 });

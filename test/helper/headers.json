@@ -1,6 +1,5 @@
 [
   {
-    "match": ".*\\.html",
     "name": "Lorem-Ipsum",
     "value": "dolor-sit-amet"
   }

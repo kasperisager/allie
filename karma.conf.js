@@ -1,5 +1,9 @@
 const headers = require('./test/helper/headers');
 
+headers.forEach(header =>
+  Object.assign(header, {match: '.*\\.html'})
+);
+
 module.exports = config => {
   config.set({
     frameworks: [
@@ -13,9 +17,6 @@ module.exports = config => {
       'test/**/*.spec.js'
     ],
     preprocessors: {
-      'src/**/*.js': [
-        'browserify'
-      ],
       'test/**/*.js': [
         'browserify'
       ]
@@ -32,9 +33,7 @@ module.exports = config => {
           ],
           plugins: [
             'transform-runtime',
-            ['istanbul', {
-              excllude: 'test/**/*'
-            }]
+            'istanbul'
           ]
         }]
       ]

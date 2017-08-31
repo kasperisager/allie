@@ -24,6 +24,15 @@ describe('textAlternative', () => {
     );
   });
 
+  it('returns the text alternative of an element with a title', async () => {
+    await test(
+      `
+      <p title="Lorem ipsum">Dolor sit amet</p>
+      `,
+      p => assert(textAlternative(p) === 'Lorem ipsum')
+    );
+  });
+
   it('returns the text alternative of an element with an aria-label', async () => {
     await test(
       `
